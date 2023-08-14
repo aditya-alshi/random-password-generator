@@ -1,0 +1,27 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 600px;
+    margin: auto;
+    background-color: cornsilk;
+    text-align: center;
+    
+}
+
+#password-display{
+    height: 40px;
+    font-size: 20px;
+    margin: auto;
+    background-color: aliceblue;
+    padding-top: 9px;
+    width: 50%;
+    border: 2px solid black;
+}
+
+button{
+    font-weight: bold;
+    padding: 4px;
+    font-size: 20px;
+    color: rgb(100, 3, 3);
+    width: 35%;
+}
+
