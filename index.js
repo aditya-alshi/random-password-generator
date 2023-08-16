@@ -1,24 +1,46 @@
 
-let char;
-let passwordString = "";
 let passwordDspl = document.getElementById("password-display");
 
+const numCheckbox = document.getElementById("numbers");
+const letterCheckbox = document.getElementById("letters");
+const symCheckbox = document.getElementById("symbols")
 
 
-const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const lettersList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const numbersList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?", "/"];
+const symbolsList = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?", "/"];
 
-const allChars = letters.concat(numbers, symbols);
+
 
 function generatePassword(){
-    passwordString = "";
-    for(let e=0; e<8; e++){
-        char = Math.floor(Math.random() * allChars.length);
-        passwordString += allChars[char];
+    let passwordString = "";
+    const checkMap = {
+        "numbers" : numbersList,
+        "letters" : lettersList,
+        "symbols" : symbolsList
     }
+     
+
+    let allChars = [];
+    for(let key in checkMap){
+        if(document.getElementById(key).checked){
+            allChars.push(...checkMap[key])
+        }
+    }
+
+    if(allChars.length === 0){
+        passwordString = "No options selected";
+    }else{
+
+        for(let e=0; e<8; e++){
+            let rdindex = Math.floor(Math.random() * allChars.length);
+            passwordString += allChars[rdindex];
+        }
+    }
+
+    
     passwordDspl.textContent = passwordString;
 }
 

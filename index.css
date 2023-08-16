@@ -24,4 +24,19 @@ button{
     color: rgb(100, 3, 3);
     width: 35%;
 }
+section{
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    color: rebeccapurple;
+}
+
+
+
+.options{
+    width: 20%;
+}
 
