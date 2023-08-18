@@ -19,13 +19,15 @@
             <div class="options">
                 <label for="symbols">Symbols</label>
                 <input type="checkbox" id="symbols" name="symbols" value="symbols" checked = "true">
-                
             </div>
             <div class="options">
                 <label for="letters">Letters</label>
                 <input type="checkbox" id="letters" name="letters" value="letters" checked = "true">
             </div>
+
         </section><br>
+        <label id="selectorLabel" for="selectChars">Select no. of characters:  </label>
+        <input type="number" value="8" min="8" max="15" id="selectChars"><br><br>
         <p id="password-display"></p>
         <br>
         <button onclick="generatePassword()">Generate</button>

@@ -1,5 +1,6 @@
 
 let passwordDspl = document.getElementById("password-display");
+let selectChars = document.getElementById("selectChars");
 
 const numCheckbox = document.getElementById("numbers");
 const letterCheckbox = document.getElementById("letters");
@@ -34,7 +35,8 @@ function generatePassword(){
         passwordString = "No options selected";
     }else{
 
-        for(let e=0; e<8; e++){
+        
+        for(let e=0; e<selectChars.value; e++){
             let rdindex = Math.floor(Math.random() * allChars.length);
             passwordString += allChars[rdindex];
         }

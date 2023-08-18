@@ -7,6 +7,15 @@ body{
     
 }
 
+#selectorLabel{
+    font-size: 18px;
+}
+
+input[type = "number"]{
+    width: 10%;
+    height: 20px;
+}
+
 #password-display{
     height: 40px;
     font-size: 20px;
