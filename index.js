@@ -33,13 +33,13 @@ function generatePassword(){
 
     if(allChars.length === 0){
         passwordString = "No options selected";
-    }else{
-
-        
+    }else if(selectChars.value >= 8 && selectChars.value <= 15){
         for(let e=0; e<selectChars.value; e++){
             let rdindex = Math.floor(Math.random() * allChars.length);
             passwordString += allChars[rdindex];
         }
+    }else{
+        passwordString = "Select between 8 and 15";
     }
 
     
